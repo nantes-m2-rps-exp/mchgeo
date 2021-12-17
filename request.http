@@ -1,0 +1,5 @@
+GET http://localhost:8080/v2/degeo?deid=500&bending=true HTTP/1.1
+
+###
+
+GET http://localhost:8080/v2/degeo?deid=509&bending=true HTTP/1.1

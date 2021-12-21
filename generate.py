@@ -1,9 +1,10 @@
 import json
-from mchgeo import DATA_DIR, LIST_OF_DEIDS
+from mchgeo import LIST_OF_DEIDS
 import os.path
 import requests
 import sys
-import math
+
+DATA_DIR=os.path.abspath(os.path.join(__file__,'..','mchgeo','data'))
 
 def _read_transformations(transformFile):
     try:

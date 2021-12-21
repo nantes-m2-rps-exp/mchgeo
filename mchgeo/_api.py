@@ -1,25 +1,12 @@
 from ._constants import LIST_OF_DEIDS
-from ._constants import DATA_DIR
-import os.path
 import json
 import math
-
-
-def _read_geometry(geomFile):
-    try:
-        with open(geomFile) as f:
-            g = json.load(f)
-            return g
-    except IOError:
-        print("could not read file", geomFile)
-
+from importlib.resources import open_text
 
 def _asJSON():
-    geomFile = os.path.join(DATA_DIR, "de-geometry.json")
-    try:
-        return _read_geometry(geomFile)
-    except IOError:
-        return {}
+    geomFile= open_text('.'.join((__package__,'data')),'de-geometry.json')
+    g = json.load(geomFile)
+    return g
 
 
 def feature(deid: int):

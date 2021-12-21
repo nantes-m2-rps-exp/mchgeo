@@ -1,7 +1,5 @@
 import os.path
 
-DATA_DIR=os.path.abspath(os.path.join(__file__,'..','data'))
-
 LIST_OF_DEIDS=[ 
   100, 101, 102, 103,
   200, 201, 202, 203,
